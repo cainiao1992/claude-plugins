@@ -4,7 +4,7 @@ Claude Code plugin port of [vmoranv/jshookmcp](https://github.com/vmoranv/jshook
 
 ## What it provides
 
-- **MCP server** `jshook`: launched via `npx -y @jshookmcp/jshook@0.4.8` over stdio, with the lightweight profile (`MCP_TOOL_PROFILE=search`, `npm_config_omit=optional`) that skips optional ONNX, Z3, Binaryen, Camoufox, and Playwright packages. Remove `npm_config_omit` in `.claude-plugin/plugin.json` when those full-profile runtimes are required.
+- **MCP server** `jshook`: launched via `npx -y @jshookmcp/jshook@0.4.7` over stdio, with the lightweight profile (`MCP_TOOL_PROFILE=search`, `npm_config_omit=optional`) that skips optional ONNX, Z3, Binaryen, Camoufox, and Playwright packages. Remove `npm_config_omit` in `.claude-plugin/plugin.json` when those full-profile runtimes are required.
 - **Skills** (6, from the upstream repo): getting-started, best-practices, configuration, telemetry, tool-selection, troubleshooting.
 
 ## Install

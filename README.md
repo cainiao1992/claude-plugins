@@ -7,7 +7,7 @@ A Claude Code plugin marketplace curating reverse-engineering and JavaScript-ana
 | Plugin | Version | What it does | License |
 |--------|---------|--------------|---------|
 | [rea](plugins/rea/) | 6.10.1 | Reverse engineer anything with agents, from app behavior down to native binaries (upstream: [morluto/rea](https://github.com/morluto/rea)) | MIT |
-| [jshookmcp](plugins/jshookmcp/) | 0.4.8 | MCP server for AI-assisted JavaScript analysis and security analysis — browser automation, CDP debugging, network monitoring, JS hooks, code analysis (upstream: [vmoranv/jshookmcp](https://github.com/vmoranv/jshookmcp)) | AGPL-3.0-only |
+| [jshookmcp](plugins/jshookmcp/) | 0.4.7 | MCP server for AI-assisted JavaScript analysis and security analysis — browser automation, CDP debugging, network monitoring, JS hooks, code analysis (upstream: [vmoranv/jshookmcp](https://github.com/vmoranv/jshookmcp)) | AGPL-3.0-only |
 
 ## Install
 

@@ -1,6 +1,6 @@
 {
   "name": "jshookmcp",
-  "version": "0.4.8",
+  "version": "0.4.7",
   "description": "MCP server for AI-assisted JavaScript analysis and security analysis — browser automation, CDP debugging, network monitoring, JS hooks, and code analysis.",
   "author": {
     "name": "vmoranv",
@@ -24,7 +24,7 @@
       "command": "npx",
       "args": [
         "-y",
-        "@jshookmcp/jshook@0.4.8"
+        "@jshookmcp/jshook@0.4.7"
       ],
       "env": {
         "MCP_TOOL_PROFILE": "search",
