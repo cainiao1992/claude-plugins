@@ -1,30 +1,41 @@
-# rea (Claude Code plugin)
+# rea marketplace
 
-Claude Code plugin port of [morluto/rea](https://github.com/morluto/rea) — reverse engineer anything with agents, from app behavior down to native binaries.
+A Claude Code plugin marketplace curating reverse-engineering and JavaScript-analysis plugins.
 
-## What it provides
+## Plugins
 
-- **Skill** `reverse-engineer-anything`: investigation guidance for native, managed, Electron/JavaScript, packaged, firmware, and browser targets, plus AgentEnv bundle construction.
-- **MCP server** `rea`: the REA tool surface (decompilation, runtime observation, artifact inspection, evidence workflows), launched via `npx -y rea-agents@6.10.1 mcp`.
-
-The skill supplies instructions only; all analysis capability comes from the MCP server. Installing the plugin registers both — no separate `rea setup` needed for the plugin server.
+| Plugin | Version | What it does | License |
+|--------|---------|--------------|---------|
+| [rea](plugins/rea/) | 6.10.1 | Reverse engineer anything with agents, from app behavior down to native binaries (upstream: [morluto/rea](https://github.com/morluto/rea)) | MIT |
+| [jshookmcp](plugins/jshookmcp/) | 0.4.8 | MCP server for AI-assisted JavaScript analysis and security analysis — browser automation, CDP debugging, network monitoring, JS hooks, code analysis (upstream: [vmoranv/jshookmcp](https://github.com/vmoranv/jshookmcp)) | AGPL-3.0-only |
 
 ## Install
 
-From the marketplace (npm source):
-
 ```
-/plugin marketplace add morluto/rea
+/plugin marketplace add <this-repo>
 /plugin install rea@rea
+/plugin install jshookmcp@rea
 ```
 
-Local test from this directory:
+Local test:
 
 ```
-claude --plugin-dir /path/to/this/directory
+claude --plugin-dir /path/to/this/repo/plugins/rea
+claude --plugin-dir /path/to/this/repo/plugins/jshookmcp
 ```
 
-## Requirements
+## Layout
 
-- Node.js (for `npx` to launch the MCP server)
-- Target-specific engines (rizin, Frida, adb, JEB, ...) are needed per investigation; the skill's [connection-and-recovery](skills/reverse-engineer-anything/references/connection-and-recovery.md) reference covers diagnosis.
+```
+.claude-plugin/marketplace.json   # marketplace manifest (multi-plugin list)
+plugins/<name>/
+├── .claude-plugin/plugin.json    # per-plugin manifest
+└── skills/                       # bundled skills
+```
+
+Each plugin registers its MCP server via `npx` with a pinned package version, so analysis capability updates are decoupled from this marketplace's own releases.
+
+## Notes per plugin
+
+- **rea**: target-specific engines (rizin, Frida, adb, JEB, ...) are needed per investigation; see the skill's connection-and-recovery reference.
+- **jshookmcp**: runs on Node.js ≥ 22. The registered server uses the lightweight profile (`MCP_TOOL_PROFILE=search`, `npm_config_omit=optional`), which skips optional ONNX/Z3/Binaryen/Camoufox/Playwright runtimes — remove `npm_config_omit` in `plugins/jshookmcp/.claude-plugin/plugin.json` if you need full-profile features. Telemetry is disabled by default (`JSHOOK_OBSERVABILITY_EXPORTER=none`); remove that env var to restore upstream-default metrics export.

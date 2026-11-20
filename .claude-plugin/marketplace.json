@@ -1,7 +1,7 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "rea",
-  "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+  "description": "Curated reverse-engineering and JavaScript-analysis plugins for Claude Code.",
   "owner": {
     "name": "morluto",
     "url": "https://github.com/morluto"
@@ -10,7 +10,13 @@
     {
       "name": "rea",
       "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
-      "source": "./",
+      "source": "./plugins/rea",
+      "category": "development"
+    },
+    {
+      "name": "jshookmcp",
+      "description": "MCP server for AI-assisted JavaScript analysis and security analysis — browser automation, CDP debugging, network monitoring, JS hooks, and code analysis.",
+      "source": "./plugins/jshookmcp",
       "category": "development"
     }
   ]

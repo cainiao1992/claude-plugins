@@ -1,0 +1,36 @@
+{
+  "name": "jshookmcp",
+  "version": "0.4.8",
+  "description": "MCP server for AI-assisted JavaScript analysis and security analysis — browser automation, CDP debugging, network monitoring, JS hooks, and code analysis.",
+  "author": {
+    "name": "vmoranv",
+    "url": "https://github.com/vmoranv"
+  },
+  "homepage": "https://github.com/vmoranv/jshookmcp",
+  "repository": "https://github.com/vmoranv/jshookmcp",
+  "license": "AGPL-3.0-only",
+  "keywords": [
+    "javascript-analysis",
+    "browser-automation",
+    "cdp-debugging",
+    "js-hooks",
+    "mcp-server"
+  ],
+  "skills": "./skills",
+  "icon": "./assets/jshookmcp-icon.png",
+  "mcpServers": {
+    "jshook": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@jshookmcp/jshook@0.4.8"
+      ],
+      "env": {
+        "MCP_TOOL_PROFILE": "search",
+        "npm_config_omit": "optional",
+        "JSHOOK_OBSERVABILITY_EXPORTER": "none"
+      }
+    }
+  }
+}
