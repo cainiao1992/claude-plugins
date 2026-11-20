@@ -11,11 +11,11 @@ The skill supplies instructions only; all analysis capability comes from the MCP
 
 ## Install
 
-From the marketplace (npm source):
+From this marketplace:
 
 ```
-/plugin marketplace add morluto/rea
-/plugin install rea@rea
+/plugin marketplace add cainiao1992/claude-plugins
+/plugin install rea@cainiao92-claude-plugins
 ```
 
 Local test from this directory:

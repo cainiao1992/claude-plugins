@@ -9,7 +9,7 @@ Claude Code plugin port of [vmoranv/jshookmcp](https://github.com/vmoranv/jshook
 
 ## Install
 
-From this marketplace: `/plugin install jshookmcp@rea`
+From this marketplace: `/plugin install jshookmcp@cainiao92-claude-plugins`
 
 ## Requirements
 

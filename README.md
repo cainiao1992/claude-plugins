@@ -1,4 +1,4 @@
-# rea marketplace
+# claude-plugins
 
 A Claude Code plugin marketplace curating reverse-engineering and JavaScript-analysis plugins.
 
@@ -12,9 +12,9 @@ A Claude Code plugin marketplace curating reverse-engineering and JavaScript-ana
 ## Install
 
 ```
-/plugin marketplace add <this-repo>
-/plugin install rea@rea
-/plugin install jshookmcp@rea
+/plugin marketplace add cainiao1992/claude-plugins
+/plugin install rea@cainiao92-claude-plugins
+/plugin install jshookmcp@cainiao92-claude-plugins
 ```
 
 Local test:

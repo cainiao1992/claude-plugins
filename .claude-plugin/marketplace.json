@@ -1,10 +1,10 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
-  "name": "rea",
+  "name": "cainiao92-claude-plugins",
   "description": "Curated reverse-engineering and JavaScript-analysis plugins for Claude Code.",
   "owner": {
-    "name": "morluto",
-    "url": "https://github.com/morluto"
+    "name": "cainiao1992",
+    "url": "https://github.com/cainiao1992"
   },
   "plugins": [
     {
