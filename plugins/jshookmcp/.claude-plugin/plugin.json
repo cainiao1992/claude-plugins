@@ -27,7 +27,7 @@
         "@jshookmcp/jshook@0.4.7"
       ],
       "env": {
-        "MCP_TOOL_PROFILE": "search",
+        "MCP_TOOL_PROFILE": "workflow",
         "npm_config_omit": "optional",
         "JSHOOK_OBSERVABILITY_EXPORTER": "none"
       }
